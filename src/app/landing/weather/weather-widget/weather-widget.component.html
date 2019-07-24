@@ -1,0 +1,109 @@
+<div class="forecast-table">
+  <div class="container">
+    <div class="forecast-container">
+      <div class="today forecast">
+        <div class="forecast-header">
+          <div class="day">{{curentDateWeather.dt * 1000 | date :'fullDate'}}</div>
+          <div class="date">Weather conditions at {{curentDateWeather.dt * 1000|  date: 'shortTime'}}</div>
+        </div> <!-- .forecast-header -->
+        <div class="forecast-content">
+          <div class="location">{{curentDateWeather.name}}</div>
+          <div class="degree">
+            <div class="num">{{curentDateWeather.main.temp}}<sup>o</sup>C</div>
+            <div class="forecast-icon">
+              <img src="http://openweathermap.org/img/w/{{curentDateWeather.weather[0].icon}}.png" alt="images" width=90>
+            </div>
+          </div>
+          <span><img src="/assets/images/icon-umberella.png" alt="images">{{curentDateWeather.main.humidity}}</span>
+          <span><img src="/assets/images/icon-wind.png"  alt="images">{{curentDateWeather.wind.speed}} km/h</span>
+          <span><img src="/assets/images/icon-compass.png"  alt="images">{{curentDateWeather.main.pressure}}</span>
+        </div>
+      </div>
+
+      <div class="forecast">
+        <div class="forecast-header">
+          <div class="day">{{firstSlot.dt * 1000 | date :'shortTime'}}</div>
+        </div> <!-- .forecast-header -->
+        <div class="forecast-content">
+          <div class="forecast-icon">
+            <img src="http://openweathermap.org/img/w/{{firstSlot.weather[0].icon}}.png" alt="images" width=48>
+          </div>
+          <div class="degree">{{firstSlot.main.temp}}<sup>o</sup>C</div>
+          <div class="degree">{{firstSlot.weather[0].main}}</div>
+          <small>Min: {{firstSlot.main.temp_min}}<sup>o</sup></small>
+        </div>
+      </div>
+
+      <div class="forecast">
+        <div class="forecast-header">
+          <div class="day">{{secondSlot.dt * 1000 | date :'shortTime'}}</div>
+        </div> <!-- .forecast-header -->
+        <div class="forecast-content">
+          <div class="forecast-icon">
+            <img src="http://openweathermap.org/img/w/{{firstSlot.weather[0].icon}}.png" alt="images" width=48>
+          </div>
+          <div class="degree">{{secondSlot.main.temp}}<sup>o</sup>C</div>
+          <div class="degree">{{secondSlot.weather[0].main}}</div>
+          <small>Min: {{secondSlot.main.temp_min}}<sup>o</sup></small>
+        </div>
+      </div>
+
+      <div class="forecast">
+        <div class="forecast-header">
+          <div class="day">{{thirdSlot.dt * 1000 | date :'shortTime'}}</div>
+        </div> <!-- .forecast-header -->
+        <div class="forecast-content">
+          <div class="forecast-icon">
+            <img src="http://openweathermap.org/img/w/{{thirdSlot.weather[0].icon}}.png" alt="images" width=48>
+          </div>
+          <div class="degree">{{thirdSlot.main.temp}}<sup>o</sup>C</div>
+          <div class="degree">{{thirdSlot.weather[0].main}}</div>
+          <small>Min: {{thirdSlot.main.temp_min}}<sup>o</sup></small>
+        </div>
+      </div>
+
+      <div class="forecast">
+        <div class="forecast-header">
+          <div class="day">{{fourthSlot.dt * 1000 | date :'shortTime'}}</div>
+        </div> <!-- .forecast-header -->
+        <div class="forecast-content">
+          <div class="forecast-icon">
+            <img src="http://openweathermap.org/img/w/{{fourthSlot.weather[0].icon}}.png" alt="images" width=48>
+          </div>
+          <div class="degree">{{fourthSlot.main.temp}}<sup>o</sup>C</div>
+          <div class="degree">{{fourthSlot.weather[0].main}}</div>
+          <small>Min: {{fourthSlot.main.temp_min}}<sup>o</sup></small>
+        </div>
+      </div>
+
+      <div class="forecast">
+        <div class="forecast-header">
+          <div class="day">{{fifthSlot.dt * 1000 | date :'shortTime'}}</div>
+        </div> <!-- .forecast-header -->
+        <div class="forecast-content">
+          <div class="forecast-icon">
+            <img src="http://openweathermap.org/img/w/{{fifthSlot.weather[0].icon}}.png" alt="images" width=48>
+          </div>
+          <div class="degree">{{fifthSlot.main.temp}}<sup>o</sup>C</div>
+          <div class="degree">{{fifthSlot.weather[0].main}}</div>
+          <small>Min: {{fifthSlot.main.temp_min}}<sup>o</sup></small>
+        </div>
+      </div>
+
+      <div class="forecast">
+        <div class="forecast-header">
+          <div class="day">{{sixth.dt * 1000 | date :'shortTime'}}</div>
+        </div> <!-- .forecast-header -->
+        <div class="forecast-content">
+          <div class="forecast-icon">
+            <img src="http://openweathermap.org/img/w/{{sixth.weather[0].icon}}.png" alt="images" width=48>
+          </div>
+          <div class="degree">{{sixth.main.temp}}<sup>o</sup>C</div>
+          <div class="degree">{{sixth.weather[0].main}}</div>
+          <small>Min: {{sixth.main.temp_min}}<sup>o</sup></small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

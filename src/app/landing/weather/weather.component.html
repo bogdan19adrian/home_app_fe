@@ -1,0 +1,29 @@
+<div class="ui-g ">
+  <div class="ui-g-12 ui-md-12 col-lg-12">
+    <div class="ui-g-12">
+      <div class="header">
+        <img class="img-header"
+            src="/assets/images/Seasons.png" alt="images">
+        <div id="navbar topnav">
+          <div>
+            <div class="ui-g">
+              <div class="ui-g-12 ui-md-2 col-lg-8" style=" margin-left: auto; margin-right: auto;">
+                <div>
+                  <div class="find-location">
+                    <input type="text" placeholder="Find your location..." [(ngModel)]="enteredSearch">
+                    <input type="button" (click)="searchCityForWeather()" value="Find">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-12 col-lg-12">
+        <app-weather-widget *ngIf="isDataAvailable"
+                            [curentDateWeather]="currentWeather"
+                            [threeHoursWeather]="threeHoursWeather"></app-weather-widget>
+      </div>
+    </div>
+  </div>
+</div>
