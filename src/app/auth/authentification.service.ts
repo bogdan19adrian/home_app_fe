@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {map} from 'rxjs/operators';
 
 // authentication service is used to LOGIN and LOGOUT of the application
 // it posts the creds (username and password) to the backend and check for the response if it has JWT token
@@ -13,7 +13,7 @@ export class AuthenticationService {
 
   // login
   login(username: string, password: string) {
-    return this.http.post<any>(`http://localhost:8080/authenticate`, {username, password})
+    return this.http.post<any>(`http://localhost:8181/authorize/login`, {username, password})
       .pipe(
         // the backend service sends an instance of the user
         // user: any (because .post<any>)
