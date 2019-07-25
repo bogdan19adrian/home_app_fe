@@ -7,6 +7,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import {WeatherWidgetComponent} from './weather/weather-widget/weather-widget.component';
 import {LandingComponent} from './landing.component';
+import {LandingRoutingModule} from './landing-routing.module';
+import {HomeAppModule} from '../home-app/home-app/home-app.module';
+import {BaseModule} from '../base/base.module';
+import { TestComponentComponent } from './test-component/test-component.component';
 
 @NgModule({
   imports: [
@@ -15,8 +19,11 @@ import {LandingComponent} from './landing.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
+    LandingRoutingModule,
+    HomeAppModule,
+    BaseModule
   ],
-  declarations: [WeatherComponent, WeatherWidgetComponent, LandingComponent],
+  declarations: [WeatherComponent, WeatherWidgetComponent, LandingComponent, TestComponentComponent],
   exports: [WeatherComponent, LandingComponent],
   providers: [WeatherService]
 })
